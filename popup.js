@@ -32,3 +32,47 @@ document.addEventListener('DOMContentLoaded', function() {
     var swapButton = document.getElementById('swapButton');
     swapButton.addEventListener('click', swapLocations);
 });
+
+
+//Sender
+
+// Function to send data
+async function sendData() {
+    var addressA = document.getElementById('addressA').value;
+    var addressB = document.getElementById('addressB').value;
+
+    // Construct the data you want to send
+    var dataToSend = {
+        addressA: addressA,
+        addressB: addressB
+    };
+
+    // Make the POST request
+    await fetch('https://jbccc.pythonanywhere.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        data.durations.forEach((element, i) => {
+            document.getElementById('duration' + i).innerHTML = element;
+        });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Handle errors here
+    });
+    
+}
+
+// Add event listener for the send button
+document.addEventListener('DOMContentLoaded', function() {
+    var sendButton = document.getElementById('sendButton');
+    sendButton.addEventListener('click', sendData);
+    // ... [other event listeners] ...
+});
+

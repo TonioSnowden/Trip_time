@@ -12,6 +12,9 @@
         "activeTab",
         "storage"
     ],
+    "host_permissions": [
+        "https://jbccc.pythonanywhere.com/*"
+    ],
     "commands": {
         "_execute_action": {
           "suggested_key": {
