@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Location Swapper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 100;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 600px;
+            height: 400px;
+        }
+        .input-box {
+            margin: 5px 0 15px 0;
+            width: 300px; /* Adjust width as needed */
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        button {
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div>
+        <label for="addressA">From :</label>
+        <input type="text" id="addressA" class="input-box" placeholder="Enter Address A">
+    </div>
+    <div>
+        <label for="addressB">To :</label>
+        <input type="text" id="addressB" class="input-box" placeholder="Enter Address B">
+        <button id="swapButton">Swap Locations</button>
+    </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
