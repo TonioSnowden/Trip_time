@@ -4,33 +4,48 @@
     <title>Location Swapper</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 100;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #333; /* Dark background */
+            color: #fff; /* Light text color */
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: flex-start;
-            width: 600px;
-            height: 400px;
+            width: 350px; /* Adjusted width to fit content */
         }
         .input-box {
-            margin: 5px 0 15px 0;
-            width: 300px; /* Adjust width as needed */
+            margin: 10px 0;
+            width: 330px; /* Full width */
+            padding: 10px;
+            border: 1px solid #555; /* Slightly lighter border for visibility */
+            background-color: #222; /* Dark input background */
+            color: #ddd; /* Light text color for input */
+            border-radius: 4px; /* Rounded corners */
         }
         
         .container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            width: 100%; /* Use full width of the parent container */
         }
 
         button {
             cursor: pointer;
+            padding: 10px 20px;
             margin-top: 10px;
+            background-color: #555; /* Dark button background */
+            color: #fff; /* Light button text color */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            width: 100%; /* Full width */
+            box-sizing: border-box; /* Include padding and border in the width */
         }
 
         label {
             font-weight: bold;
+            margin-bottom: 5px; /* Space between label and input box */
         }
     </style>
 </head>
@@ -43,9 +58,10 @@
     <div>
         <label for="addressB">To :</label>
         <input type="text" id="addressB" class="input-box" placeholder="Enter Address B">
-        <button id="swapButton">Swap Locations</button>
     </div>
+    <button id="swapButton">Swap Locations</button>
     </div>
     <script src="popup.js"></script>
+    
 </body>
 </html>
