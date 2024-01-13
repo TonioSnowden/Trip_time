@@ -1,6 +1,6 @@
 // Function to save data
 function saveAddress() {
-    var address = document.getElementById("addressA").value;
+    var address = document.getElementById("addressB").value;
     chrome.storage.local.set({ "savedAddress": address }, function() {
         console.log('Address saved: ' + address);
     });
@@ -10,13 +10,13 @@ function saveAddress() {
 window.onload = function() {
     chrome.storage.local.get("savedAddress", function(items) {
         if (items.savedAddress) {
-            document.getElementById("addressA").value = items.savedAddress;
+            document.getElementById("addressB").value = items.savedAddress;
         }
     });
 }
 
 // Event listener for input change
-document.getElementById("addressA").addEventListener("input", saveAddress);
+document.getElementById("addressB").addEventListener("input", saveAddress);
 
 // This function swaps the values of the two address input fields
 function swapLocations() {
