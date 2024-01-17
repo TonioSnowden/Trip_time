@@ -78,5 +78,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document
         .getElementById("addressB")
         .addEventListener("input", saveAddress);
-    });
+});
 
