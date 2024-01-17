@@ -5,7 +5,7 @@
     "description": "Calculate the distance between two points",
     "icons": { "48": "data/logo.png" },
     "action": {
-      "default_popup": "popup.html",
+      "default_popup": "popup/popup.html",
       "default_icon": "data/logo.png"
     },
     "permissions": [
