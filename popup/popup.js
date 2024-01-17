@@ -60,7 +60,7 @@ async function sendData() {
     .then(data => {
         console.log('Success:', data);
         data.durations.forEach((element, i) => {
-            document.getElementById('duration' + i).innerHTML = element;
+            document.getElementById(`duration${i}`).innerHTML = element;
         });
     })
     .catch((error) => {
