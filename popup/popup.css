@@ -13,19 +13,13 @@ body {
     /* Adjusted width to fit content */
 }
 
-.input-box {
-    margin: 10px 0;
-    width: 330px;
-    /* Full width */
-    padding: 10px;
-    border: 1px solid #555;
-    /* Slightly lighter border for visibility */
-    background-color: #669BBC;
-    /* Dark input background */
-    color: #FDF0D5;
-    /* Light text color for input */
-    border-radius: 4px;
-    /* Rounded corners */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    /* margin: 0 0 10px 0; */
+    /* Use full width of the parent container */
 }
 
 .container-icon {
@@ -56,12 +50,25 @@ body {
     background-color: #003049;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    /* Use full width of the parent container */
+.input-box {
+    margin: 10px 0;
+    width: 330px;
+    /* Full width */
+    padding: 10px;
+    border: 1px solid #555;
+    /* Slightly lighter border for visibility */
+    background-color: #669BBC;
+    /* Dark input background */
+    color: #FDF0D5;
+    /* Light text color for input */
+    border-radius: 4px;
+    /* Rounded corners */
+    margin-bottom: 5px; /* Adjusted margin to reduce space between input and disclaimer */
+
+}
+
+.address-input {
+    margin-bottom: 10px;
 }
 
 button {
@@ -82,9 +89,14 @@ button {
     /* Include padding and border in the width */
 }
 
+.true-address {
+  color: gray;
+  margin-top: 5px;
+  font-size: 12px;
+}
 
 label {
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     /* Space between label and input box */
 }
