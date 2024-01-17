@@ -1,14 +1,17 @@
+// So that we can easily change to local, sync or session
+let chromeStorage = chrome.storage.sync;
+
 // Function to save data
 function saveAddress() {
     var address = document.getElementById("addressB").value;
-    chrome.storage.local.set({ "savedAddress": address }, function() {
+    chromeStorage.set({ "savedAddress": address }, function() {
         console.log('Address saved: ' + address);
     });
 }
 
 // Load saved address when popup opens
 window.onload = function() {
-    chrome.storage.local.get("savedAddress", function(items) {
+    chromeStorage.get("savedAddress", function(items) {
         if (items.savedAddress) {
             document.getElementById("addressB").value = items.savedAddress;
         }
@@ -20,17 +23,17 @@ document.getElementById("addressB").addEventListener("input", saveAddress);
 
 // This function swaps the values of the two address input fields
 function swapLocations() {
-    var addressA = document.getElementById('addressA').value;
-    var addressB = document.getElementById('addressB').value;
+    const addressA = document.getElementById('addressA').value;
 
-    document.getElementById('addressA').value = addressB;
+    document.getElementById('addressA').value = document.getElementById('addressB').value;
     document.getElementById('addressB').value = addressA;
 }
 
 // This event listener calls the swapLocations function when the button is clicked
 document.addEventListener('DOMContentLoaded', function() {
-    var swapButton = document.getElementById('swapButton');
-    swapButton.addEventListener('click', swapLocations);
+    document
+        .getElementById('swapButton')
+        .addEventListener('click', swapLocations);
 });
 
 
@@ -38,8 +41,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to send data
 async function sendData() {
-    var addressA = document.getElementById('addressA').value;
-    var addressB = document.getElementById('addressB').value;
+    const addressA = document.getElementById('addressA').value;
+    const addressB = document.getElementById('addressB').value;
 
     // Construct the data you want to send
     var dataToSend = {
@@ -71,8 +74,9 @@ async function sendData() {
 
 // Add event listener for the send button
 document.addEventListener('DOMContentLoaded', function() {
-    var sendButton = document.getElementById('sendButton');
-    sendButton.addEventListener('click', sendData);
+    document
+        .getElementById('sendButton')
+        .addEventListener('click', sendData);
     // ... [other event listeners] ...
 });
 
