@@ -10,34 +10,43 @@
     <div class="container">
         <div class="address-input">
             <label for="addressA">From :</label>
-            <input type="text" id="addressA" class="input-box" placeholder="Enter Address A">
-            <p class="true-address" hidden>Disclaimer: This is a sample disclaimer.</p>
+            <div class="input-container">
+                <input type="text" id="addressA" class="input-box" placeholder="Enter Address A">
+                <div class="loading-spinner" />
+            </div>
+            <p class="true-address" hidden/>
         </div>
-        
+
         <div class="address-input">
             <label for="addressB">To :</label>
-            <input type="text" id="addressB" class="input-box" placeholder="Enter Address B">
-            <p class="true-address" hidden>Disclaimer: This is a sample disclaimer.</p>
+            <div class="input-container">
+                <input type="text" id="addressB" class="input-box" placeholder="Enter Address B">
+                <div class="loading-spinner" />
+            </div>
+
+            <p class="true-address" hidden/>
         </div>
-        <button id="swapButton">Swap Locations</button>
-        <button id="sendButton">Send</button>
+        <div class="action-buttons">
+            <button id="swapButton">Swap Locations</button>
+            <button id="sendButton" disabled>Send</button>
+        </div>
     </div>
     <div class="container-icon">
         <div class="icon-with-duration">
             <img src="../data/car.svg" class="icon-image" alt="Icon 2">
-            <span class="duration" id="duration0"></span>
+            <span class="duration" id="duration0">6 min</span>
         </div>
         <div class="icon-with-duration">
             <img src="../data/walk.svg" class="icon-image" alt="Icon 1">
-            <span class="duration" id="duration1"></span>
+            <span class="duration" id="duration1">6 min</span>
         </div>
         <div class="icon-with-duration">
             <img src="../data/bike.svg" class="icon-image" alt="Icon 4">
-            <span class="duration" id="duration2"></span>
+            <span class="duration" id="duration2">6 min</span>
         </div>
         <div class="icon-with-duration">
             <img src="../data/bus.svg" class="icon-image" alt="Icon 3">
-            <span class="duration" id="duration3"></span>
+            <span class="duration" id="duration3">6 min</span>
         </div>
     </div>
     <script src="popup.js"></script>
