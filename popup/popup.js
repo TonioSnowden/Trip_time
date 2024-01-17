@@ -18,8 +18,6 @@ window.onload = function() {
     });
 }
 
-// Event listener for input change
-document.getElementById("addressB").addEventListener("input", saveAddress);
 
 // This function swaps the values of the two address input fields
 function swapLocations() {
@@ -73,10 +71,12 @@ async function sendData() {
 }
 
 // Add event listener for the send button
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     document
         .getElementById('sendButton')
         .addEventListener('click', sendData);
-    // ... [other event listeners] ...
-});
+    document
+        .getElementById("addressB")
+        .addEventListener("input", saveAddress);
+    });
 
